@@ -1,0 +1,48 @@
+@mixin baseAnimation($name, $delay) {
+  animation-name: $name;
+  animation-duration: 0.5s;
+  animation-delay: $delay;
+  animation-fill-mode: both;
+}
+@mixin transtion($name, $delay) {
+  @include baseAnimation($name, $delay);
+  @keyframes #{$name} {
+    @content
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scaleIn {
+  0%{
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    width: 250px;
+    height: 250px;
+  }
+}
+@keyframes scaleOut {
+  0% {
+    width: 250px;
+    height: 250px;
+  }
+  100%{
+    width: 100px;
+    height: 100px;
+  }
+}

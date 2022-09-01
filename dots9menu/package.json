@@ -1,0 +1,16 @@
+{
+  "name": "dots9menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:watch": "sass --watch ./assets/scss/index.scss ./assets/css/index.css",
+    "css:build": "sass --no-source-map --style=compressed ./assets/scss/index.scss ./assets/css/index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.54.8"
+  }
+}

@@ -1,0 +1,612 @@
+@import "__var";
+@import "__mixins";
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #0f131b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggled {
+  .panel {
+    @include baseAnimation(scaleOut, 1.2s);
+
+    &>.icons-group {
+      &>.icon:nth-child(2) {
+        $start-time: 0.8s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        top: 0px;
+
+        &>.content-icon {
+          @include transtion(icon-2-base, $start-time) {
+            0% {
+              opacity: 1;
+              width: $icon-size;
+              height: $icon-size;
+              top: -70px;
+              transform: translateX(-20px);
+            }
+
+            100% {
+              top: 0px;
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      &>.icon:nth-child(6) {
+        $start-time: 0.7s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        &>.content-icon {
+          right: -70px;
+
+          @include transtion(icon-6-base, $start-time) {
+            0% {
+              opacity: 1;
+              width: $icon-size;
+              height: $icon-size;
+              right: -70px;
+              transform: translateY(-20px);
+            }
+
+            100% {
+              opacity: 0;
+              right: 0px;
+            }
+          }
+        }
+      }
+
+      &>.icon:nth-child(8) {
+        $start-time: 0.6s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        &>.content-icon {
+          bottom: -70px;
+
+          @include transtion(icon-8-base, $start-time) {
+            0% {
+              opacity: 1;
+              width: $icon-size;
+              height: $icon-size;
+              bottom: -70px;
+              transform: translateX(-20px);
+            }
+
+            100% {
+              opacity: 0;
+              bottom: 0px;
+            }
+          }
+        }
+      }
+
+      &>.icon:nth-child(4) {
+        $start-time: 0.5s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        &>.content-icon {
+          left: -70px;
+
+          @include transtion(icon-4-base, $start-time) {
+            0% {
+              opacity: 1;
+              width: $icon-size;
+              height: $icon-size;
+              left: -70px;
+              transform: translateY(-20px);
+            }
+
+            100% {
+              left: 0px;
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      &>.icon:nth-child(5) {
+        $start-time: 0.4s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        &>.content-icon {
+          @include transtion(icon-5-base, $start-time) {
+            0% {
+              opacity: 1;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: $icon-size;
+              height: $icon-size;
+            }
+
+            100% {
+              left: 0px;
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      &>.icon:nth-child(9) {
+        $start-time: 0.3s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        &>.content-icon {
+          right: -70px;
+          bottom: -70px;
+
+          @include transtion(icon-9-base, $start-time) {
+            0% {
+              opacity: 1;
+              width: $icon-size;
+              height: $icon-size;
+              right: -70px;
+              bottom: -70px;
+            }
+
+            100% {
+              opacity: 0;
+              right: 0px;
+              bottom: 0px;
+            }
+          }
+        }
+      }
+
+      &>.icon:nth-child(1) {
+        $start-time: 0.2s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        &>.content-icon {
+          left: -70px;
+          top: -70px;
+
+          @include transtion(icon-1-base, $start-time) {
+            0% {
+              opacity: 1;
+              width: $icon-size;
+              height: $icon-size;
+              left: -70px;
+              top: -70px;
+            }
+
+            100% {
+              opacity: 0;
+              left: 0px;
+              top: 0px;
+            }
+          }
+        }
+      }
+
+      &>.icon:nth-child(3) {
+        $start-time: 0.1s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        &>.content-icon {
+          right: -70px;
+          top: -70px;
+
+          @include transtion(icon-3-base, $start-time) {
+            0% {
+              opacity: 1;
+              width: $icon-size;
+              height: $icon-size;
+              right: -70px;
+              top: -70px;
+            }
+
+            100% {
+              opacity: 0;
+              right: 0px;
+              top: 0px;
+            }
+          }
+        }
+      }
+
+      &>.icon:nth-child(7) {
+        $start-time: 0s;
+
+        &::before {
+          @include baseAnimation(fadeIn, $start-time);
+        }
+
+        &>.content-icon {
+          left: -70px;
+          bottom: -70px;
+
+          @include transtion(icon-7-base, $start-time) {
+            0% {
+              opacity: 1;
+              width: $icon-size;
+              height: $icon-size;
+              left: -70px;
+              bottom: -70px;
+            }
+
+            100% {
+              opacity: 0;
+              left: 0px;
+              bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &>.panel {
+    border-radius: 10px;
+    background-color: $bg-panel;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.5s;
+    width: 100px;
+    height: 100px;
+    &>.icons-group {
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 5px;
+      width: min-content;
+
+      &>.icon {
+        width: 10px;
+        height: 10px;
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          opacity: 1;
+          background-color: $bg-dot;
+          border-radius: 50%;
+        }
+
+        &>.content-icon {
+          width: 10px;
+          height: 10px;
+          transition: all .5s;
+          position: absolute;
+          opacity: 0;
+          background-color: $bg-icon;
+          transform: translate(0px, 0px);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $color-icon;
+
+          &>svg {
+            width: 40%;
+            height: 40%;
+            fill: inherit;
+          }
+
+          &:hover {
+            color: #5fdc7c;
+            text-shadow: 4px 4px #5fdc7c;
+
+            &>svg {
+              filter: drop-shadow(0px 0px 5px #5fdc7c);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #toggle-menu:checked+.panel {
+    @include baseAnimation(scaleIn, $start-time);
+
+    .icon:nth-child(2) {
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-2, $start-time) {
+          0% {
+            opacity: 0;
+            top: 0px;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 1;
+            width: $icon-size;
+            height: $icon-size;
+            top: -70px;
+            transform: translateX(-20px);
+          }
+        }
+      }
+    }
+
+    .icon:nth-child(6) {
+      $start-time: 0.1s;
+
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-6, $start-time) {
+          0% {
+            opacity: 0;
+            right: 0px;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 1;
+            width: $icon-size;
+            height: $icon-size;
+            right: -70px;
+            transform: translateY(-20px);
+          }
+        }
+      }
+    }
+
+    .icon:nth-child(8) {
+      $start-time: 0.2s;
+
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-8, $start-time) {
+          0% {
+            opacity: 0;
+            bottom: 0px;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 1;
+            width: $icon-size;
+            height: $icon-size;
+            bottom: -70px;
+            transform: translateX(-20px);
+          }
+        }
+      }
+    }
+
+    .icon:nth-child(4) {
+      $start-time: 0.3s;
+
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-4, $start-time) {
+          0% {
+            opacity: 0;
+            left: 0px;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 1;
+            width: $icon-size;
+            height: $icon-size;
+            left: -70px;
+            transform: translateY(-20px);
+          }
+        }
+      }
+    }
+
+    .icon:nth-child(5) {
+      $start-time: 0.4s;
+
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-5, $start-time) {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: $icon-size;
+            height: $icon-size;
+          }
+        }
+      }
+    }
+
+    .icon:nth-child(9) {
+      $start-time: 0.5s;
+
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-9, $start-time) {
+          0% {
+            opacity: 0;
+            right: 0px;
+            bottom: 0px;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 1;
+            width: $icon-size;
+            height: $icon-size;
+            right: -70px;
+            bottom: -70px;
+          }
+        }
+      }
+    }
+
+    .icon:nth-child(1) {
+      $start-time: 0.6s;
+
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-1, $start-time) {
+          0% {
+            opacity: 0;
+            left: 0px;
+            top: 0px;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 1;
+            width: $icon-size;
+            height: $icon-size;
+            left: -70px;
+            top: -70px;
+          }
+        }
+      }
+    }
+
+    .icon:nth-child(3) {
+      $start-time: 0.7s;
+
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-3, $start-time) {
+          0% {
+            opacity: 0;
+            right: 0px;
+            top: 0px;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 1;
+            width: $icon-size;
+            height: $icon-size;
+            right: -70px;
+            top: -70px;
+          }
+        }
+      }
+    }
+
+    .icon:nth-child(7) {
+      $start-time: 0.8s;
+
+      &::before {
+        @include baseAnimation(fadeOut, $start-time);
+      }
+
+      &>.content-icon {
+        @include transtion(icon-7, $start-time) {
+          0% {
+            opacity: 0;
+            left: 0px;
+            bottom: 0px;
+          }
+
+          20% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 1;
+            width: $icon-size;
+            height: $icon-size;
+            left: -70px;
+            bottom: -70px;
+          }
+        }
+      }
+    }
+  }
+}
